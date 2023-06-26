@@ -1,0 +1,29 @@
+* {
+  font-family: "Coolvetica Rg";
+}
+
+body {
+  background-color: black;
+}
+
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.nav-item {
+  flex: 0 0 20%;
+}
+
+.list-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-group-item {
+  width: 100%;
+}
