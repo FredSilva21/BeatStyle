@@ -1,83 +1,93 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Image Slider</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-
     <header>
+      <nav>
         <div class="navbar">
-            <div class="logo"><a href="./index.html"><img src="./assets/logo.png" alt=""></a></div>
-            <ul class="links">
-                <li><a href="#">Sales</a></li>
-                <li><a href="#">Men</a></li>
-                <li><a href="#">Women</a></li>
-                <li><a href="#">Kids</a></li>
-            </ul>
-            <a href="#" class="action_btn">Get Started</a>
-            <div class="toggle_btn">
-                <i class="fa-solid fa-bars" style="color: black;"></i>
-            </div>
+          <div class="logo">
+            <a href="./index.html"
+              ><img src="./assets/logo.png" alt="" width="150px" height="50px"
+            /></a>
+          </div>
+          <ul class="links">
+            <li><a href="#">Sales</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Kids</a></li>
+          </ul>
+          <a href="#" class="action_btn">Get Started</a>
+          <div class="toggle_btn">
+            <i class="fa-solid fa-bars" style="color: black"></i>
+          </div>
         </div>
+
+        <div class="dropdown_menu">
+          <li><a href="#">Sales</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">Kids</a></li>
+          <li><a href="#" class="action_btn">Get Started</a></li>
+        </div>
+      </nav>
     </header>
-
-    <!--Image Slider-->
-    <!--image slider start-->
-    <div class="slider">
-      <div class="slides">
-        <!--radio buttons start-->
-        <input type="radio" name="radio-btn" id="radio1">
-        <input type="radio" name="radio-btn" id="radio2">
-        <input type="radio" name="radio-btn" id="radio3">
-        <input type="radio" name="radio-btn" id="radio4">
-        <!--radio buttons end-->
-        <!--slide images start-->
-        <div class="slide">
-            <img src="./assets/sales.png" alt="">
+    <main>
+      <!--Image Slider-->
+      <!--image slider start-->
+      <div class="slider">
+        <div class="slides">
+          <!--radio buttons start-->
+          <input type="radio" name="radio-btn" id="radio1" />
+          <input type="radio" name="radio-btn" id="radio2" />
+          <input type="radio" name="radio-btn" id="radio3" />
+          <input type="radio" name="radio-btn" id="radio4" />
+          <!--radio buttons end-->
+          <!--slide images start-->
+          <div class="slide">
+            <img src="./assets/sales.png" alt="" />
+          </div>
+          <div class="slide first">
+            <img src="./assets/roupa1 carrossel.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="./assets/roupa2 carrossel.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="./assets/roupa3 carrossel.png" alt="" />
+          </div>
+          <!--slide images end-->
+          <!--automatic navigation start-->
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+          </div>
+          <!--automatic navigation end-->
         </div>
-        <div class="slide first">
-          <img src="./assets/roupa1 carrossel.png" alt="">
+        <!--manual navigation start-->
+        <div class="navigation-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+          <label for="radio4" class="manual-btn"></label>
         </div>
-        <div class="slide">
-          <img src="./assets/roupa2 carrossel.png" alt="">
-        </div>
-        <div class="slide">
-          <img src="./assets/roupa3 carrossel.png" alt="">
-        </div>
-        <!--slide images end-->
-        <!--automatic navigation start-->
-        <div class="navigation-auto">
-          <div class="auto-btn1"></div>
-          <div class="auto-btn2"></div>
-          <div class="auto-btn3"></div>
-          <div class="auto-btn4"></div>
-        </div>
-        <!--automatic navigation end-->
+        <!--manual navigation end-->
       </div>
-      <!--manual navigation start-->
-      <div class="navigation-manual">
-        <label for="radio1" class="manual-btn"></label>
-        <label for="radio2" class="manual-btn"></label>
-        <label for="radio3" class="manual-btn"></label>
-        <label for="radio4" class="manual-btn"></label>
-      </div>
-      <!--manual navigation end-->
-    </div>
-    <!--image slider end-->
+      <!--image slider end-->
+    </main>
 
-    <script type="text/javascript">
-    var counter = 1;
-    setInterval(function(){
-      document.getElementById('radio' + counter).checked = true;
-      counter++;
-      if(counter > 4){
-        counter = 1;
-      }
-    }, 5000);
-    </script>
-
+    <script src="indexl.js"></script>
   </body>
 </html>
